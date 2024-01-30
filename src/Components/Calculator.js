@@ -1,8 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { evaluate } from 'mathjs';
 function Calculator() {
     const [input, setInput]= useState("");
     const [result, setResult]= useState("");
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    useEffect(() => {
+        applyMode();
+      }, [isDarkMode]);
+
+      const applyMode = () => {
+        document.body.className = isDarkMode ? 'dark-mode' : 'light-mode';
+      };
+
+      const handleToggle = () => {
+        setIsDarkMode(!isDarkMode);
+      };
+
 
     const handleclick = (value) =>{
         if (value === '=') {
@@ -20,8 +34,18 @@ function Calculator() {
     }
     
   return (
+    
     <div className='calculator'>
-        <h1>Calculator</h1>
+         <div className="header">
+                <h1>Calculator</h1>
+                <div className="toggle-switch">
+                    <span className="mode-label">{isDarkMode ? 'Dark Mode' : 'Light Mode'}</span>
+                    <label className="switch">
+                        <input type="checkbox" onChange={handleToggle} checked={isDarkMode} />
+                        <span className="slider round"></span>
+                    </label>
+                </div>
+            </div>
         <div className='display'>
             <div className='input'>{input}</div>
             <div className='result'>{result}</div>
