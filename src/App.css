@@ -130,6 +130,26 @@ input:checked + .slider:before {
   --result-color: black; 
 }
 
+.equal{
+  background-color: skyblue;
+  color: white;
+  border: none;
+}
+
+.clear{
+  background-color: red;
+  color: white;
+  border: none;
+}
+
+button.equal:active {
+  background-color:skyblue; 
+}
+
+button.clear:active{
+  background-color: red;
+}
+
 /*Media Query Both calculator and Toggle switch*/
 @media (max-width: 600px) {
   .calculator {
