@@ -68,3 +68,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Basic Calculator App
+This is a simple calculator application. In addition to basic arithmetic operations, you can also toggle the screen on and off using the provided switch. 
+
+ => Features
+- Perform basic arithmetic operations (addition, subtraction, multiplication, division).
+- Toggle the screen on and off with the integrated switch.
