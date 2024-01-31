@@ -41,7 +41,8 @@ function Calculator() {
                 <div className="toggle-switch">
                     <span className="mode-label">{isDarkMode ? 'Dark Mode' : 'Light Mode'}</span>
                     <label className="switch">
-                        <input type="checkbox" onChange={handleToggle} checked={isDarkMode} />
+                        <input type="checkbox" 
+                            onChange={handleToggle} checked={isDarkMode} />
                         <span className="slider round"></span>
                     </label>
                 </div>
@@ -70,9 +71,9 @@ function Calculator() {
             
             
             <button onClick={() => handleclick('0')}>0</button>
-            <button onClick={() => handleclick('=')}>=</button>
+            <button className="equal" onClick={() => handleclick('=')}>=</button>
             <button onClick={() => handleclick('+')}>+</button>
-            <button onClick={() => handleclick('AC')}>AC</button>
+            <button className="clear" onClick={() => handleclick('AC')}>AC</button>
         </div>
     </div>
   )
