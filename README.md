@@ -11,8 +11,8 @@ Currently, two official plugins are available:
 # Calculator App
 A simple calculator web application built using React.
 
-#Demo Link 
-
+#Live Demo Link 
+https://calculator-vite-react-01.netlify.app
 
 ## Features
 
