@@ -1,11 +1,13 @@
-import Calculator from "./assets/Calculator.jsx";
+import React, { Suspense } from "react";
 import "./App.css";
-// import ToggleSwitch from "./Components/Toggle";
+const MyComponent = React.lazy(() => import("./assets/Calculator"));
 
 function App() {
   return (
     <div>
-      <Calculator />
+      <Suspense fallback={<div>Loading...</div>}>
+        <MyComponent />
+      </Suspense>
       {/* <ToggleSwitch /> */}
     </div>
   );
