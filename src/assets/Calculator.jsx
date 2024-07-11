@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import { evaluate } from "mathjs";
+import { create, all } from "mathjs";
+
+const math = create(all);
 
 function Calculator() {
   const [input, setInput] = useState("");
@@ -21,7 +23,7 @@ function Calculator() {
   const handleclick = (value) => {
     if (value === "=") {
       try {
-        setResult(evaluate(input).toString());
+        setResult(math(input).toString());
       } catch (error) {
         setResult("Error");
       }
