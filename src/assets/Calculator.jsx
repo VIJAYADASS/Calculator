@@ -23,7 +23,7 @@ function Calculator() {
   const handleclick = (value) => {
     if (value === "=") {
       try {
-        setResult(math(input).toString());
+        setResult(math.evaluate(input).toString());
       } catch (error) {
         setResult("Error");
       }
